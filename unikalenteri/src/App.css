@@ -21,9 +21,9 @@
   border-style: solid;
   border-color: black;
   display: inline-block;
-  height: 800px;
-  width: 1200px;
-  background-color: red;
+  height: 60vmin;
+  width: 90vmin;
+  background-color: beige;
 }
 
 .Infopaneeli {
@@ -31,7 +31,19 @@
   border-style: solid;
   border-color: black;
   display: inline-block;
-  height: 800px;
-  width: 600px;
+  height: 60vmin;
+  width: 60vmin;
   background-color:yellow;
+}
+
+.Kalenteri + .Infopaneeli {
+  margin-left: 25px;
+}
+
+.Lisää{
+  font-size: x-large;
+  margin-top: 2vmin;
+  margin-left: 15vmin;
+  height: 5vmin;
+  width: 12vmin;
 }

@@ -1,5 +1,10 @@
 import './App.css';
 
+function Lisää_tapahtuma(){
+  alert("TÄHÄN SE RUUTU MISSÄ VOI LISÄTÄ TAPAHTUMAN")
+}
+
+
 function App() {
   return (
     <div>
@@ -10,6 +15,11 @@ function App() {
           <h1>
           Infopaneeli
           </h1>
+        </div>
+        <div>
+          <button className = "Lisää" onClick={Lisää_tapahtuma}>
+            Lisää
+          </button>
         </div>
       </div>
     </div>
