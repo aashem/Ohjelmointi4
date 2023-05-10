@@ -83,6 +83,21 @@
   width: 50vmin;
 }
 
+.Kello input{
+  font-size: 25px;
+  text-align:center;
+  width: 12vmin;
+}
+
+.Hymynaamat {
+  display: table-row;
+}
+
+.Hymynaamat img{
+  margin-left: 5vmin;
+  height:10vmin;
+  width: 10vmin;
+}
 .Lisää{
   font-size: x-large;
   margin-top: 2vmin;

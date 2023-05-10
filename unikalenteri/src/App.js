@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import './App.css';
-
-
+import hymy from "./kuvat/Hymy.jpg"
+import midi from "./kuvat/Midi.jpg"
+import suru from "./kuvat/Suru.jpg"
 
 
 
@@ -67,11 +68,16 @@ function App() {
             </form>  
           </div>
           <div className = "Kello" >
-            <h2>Aika</h2>
+            <h2>Alku:</h2>
             <input onChange = {kellohändleralku} type="time" min="00:00" max="24:00" required></input>
-            ----
+            <h2>Loppu:</h2>
             <input  onChange = {kellohändlerloppu} type="time" min="00:00" max="24:00" required></input>
-            
+          <h2>Fiilis:</h2>
+          <div className = "Hymynaamat">
+            <img src={hymy} alt="hymy"></img>
+            <img src={midi} alt="midi"></img>
+            <img src={suru} alt="suru"></img>
+          </div>
           </div>
         </div>
         <div className = "Kalenteri"><h1>Kalenteri</h1></div>
