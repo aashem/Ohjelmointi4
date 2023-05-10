@@ -44,12 +44,31 @@
 }
 
 .Ikkunanraksi {
+  border-radius: 25px;
+  font-size: 3vmin;
   float:right;
-  background-color: beige;
+  background-color: white;
   margin-left: 10vmin;
   position: absolute;
   height: 5vmin;
   width: 5vmin;
+}
+
+.Valintaboxi {
+  font-size: 25px;
+  height: 3vmin;
+  width: 25vmin;
+}
+
+.Lajikenttä input{
+  font-size: 25px;
+  width: 25vmin;
+  height: 2vmin;
+
+}
+
+.Ikkunanraksi:hover {
+  background-color: red;
 }
 
 .Lisäysikkuna {
@@ -71,4 +90,5 @@
   height: 5vmin;
   width: 12vmin;
 }
+
 

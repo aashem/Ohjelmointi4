@@ -6,30 +6,74 @@ import './App.css';
 
 
 function App() {
-  
-  /*
-  Pää funktio App()
-  */
-
-  //tilakoneet true, false
+  //Tilat
   const [popup, setPopup] = useState(false)
   const [painettu, setPainettu] = useState(true)
+  const [tapahtuma, setTapahtuma] = useState("")
+  const [lajiNäkyvyys, setLajiNäkyvyys] = useState("true")
+  const [laji, setLaji] = useState("")
+  const [tyyppi, setTyyppi] = useState("")
+  const [kelloAlku, setKelloAlku] = useState("")
+  const [kelloLoppu, setKelloLoppu] = useState("")
 
   //funtkio joka ohjaa näppäimen toimintaa
+  //Toglettaa visibility "visible" tai "hidden"
   const lisäyshandler = (e) => {
-    // muuttaa popupista true tai false jos se on true tai false, toglettaa onko visible vai hidden rivillä 35
-   popup ? setPopup(false) : setPopup(true)
+    popup ? setPopup(false) : setPopup(true)
   }
+
+  const valintaboxihandler = (e) => {
+    setTapahtuma(e.target.value)
+    if (e.target.value === "Uni") {
+      setLajiNäkyvyys(false)
+    }else{
+      setLajiNäkyvyys(true)
+    }
+  }
+
+  const lajihändler = (e) => {
+    setLaji(e.target.value)
+  }
+
+  const kellohändleralku = (e) => {
+    setKelloAlku(e.target.value)
+  }
+  const kellohändlerloppu = (e) => {
+    setKelloLoppu(e.target.value)
+  }
+
   return (
     <div>
         <header className="Otsikko">UNIKALENTERI</header>
       <div className = "Pääruutu"><h1>Pääruutu</h1>
-      <div className = "Lisäysikkuna" style = {{visibility: popup ? "visible" : "hidden"}}>
-      <h1>LISÄYSIKKUNA
-        <button className="Ikkunanraksi" onClick={lisäyshandler}>X</button>
-      </h1>
-        
-      </div>
+        <div className = "Lisäysikkuna" style = {{visibility: popup ? "visible" : "hidden"}}>
+          <h1>
+            LISÄYSIKKUNA
+            <button className="Ikkunanraksi" onClick={lisäyshandler}>X</button>
+          </h1>
+          <h2>
+            Tapahtuma:
+          </h2>
+          <select className = "Valintaboxi" onChange={valintaboxihandler}>
+            <option value="Urheilu">Urheilu</option>
+            <option value="Uni">Uni</option>
+          </select>  
+          <div className= "Lajikenttä" style ={{visibility: lajiNäkyvyys && popup ? "visible" : "hidden"}}>
+            <h2>
+              Tyyppi:
+            </h2>
+            <form>
+              <input className = "Lajikenttä" onChange = {lajihändler}></input>
+            </form>  
+          </div>
+          <div className = "Kello" >
+            <h2>Aika</h2>
+            <input onChange = {kellohändleralku} type="time" min="00:00" max="24:00" required></input>
+            ----
+            <input  onChange = {kellohändlerloppu} type="time" min="00:00" max="24:00" required></input>
+            
+          </div>
+        </div>
         <div className = "Kalenteri"><h1>Kalenteri</h1></div>
         <div className = "Infopaneeli">
           <h1>
