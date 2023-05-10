@@ -9,14 +9,15 @@
 }
 
 .Pääruutu {
+  z-index:0;
   padding-top: 100px;
   text-align: center;
-  display: block;
   background-color :bisque;
   padding-bottom: 250px;
 }
 
 .Kalenteri {
+  z-index: 0;
   border: 12px;
   border-style: solid;
   border-color: black;
@@ -27,6 +28,8 @@
 }
 
 .Infopaneeli {
+  margin-top: 5vmin;
+  z-index: 0;
   border: 12px;
   border-style: solid;
   border-color: black;
@@ -40,8 +43,25 @@
   margin-left: 25px;
 }
 
+.Ikkunanraksi {
+  float:right;
+  background-color: beige;
+  margin-left: 10vmin;
+  position: absolute;
+  height: 5vmin;
+  width: 5vmin;
+}
+
 .Lisäysikkuna {
-  
+  position: absolute;
+  margin-left: 37%;
+  z-index: 1;
+  border-style: solid;
+  border-color: black;
+  border-width: 15px;
+  background-color: white;
+  height: 75vmin;
+  width: 50vmin;
 }
 
 .Lisää{

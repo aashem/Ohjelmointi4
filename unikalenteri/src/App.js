@@ -24,7 +24,12 @@ function App() {
     <div>
         <header className="Otsikko">UNIKALENTERI</header>
       <div className = "Pääruutu"><h1>Pääruutu</h1>
-      <div className = "Lisäysikkuna" style = {{visibility: popup ? "visible" : "hidden"}}>POPUP</div>
+      <div className = "Lisäysikkuna" style = {{visibility: popup ? "visible" : "hidden"}}>
+      <h1>LISÄYSIKKUNA
+        <button className="Ikkunanraksi" onClick={lisäyshandler}>X</button>
+      </h1>
+        
+      </div>
         <div className = "Kalenteri"><h1>Kalenteri</h1></div>
         <div className = "Infopaneeli">
           <h1>
