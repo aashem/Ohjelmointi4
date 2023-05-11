@@ -10,7 +10,11 @@ import very_sad from "./kuvat/very-sad.png";
 
 function App() {
   //Tilat
+<<<<<<< HEAD
   const ids = ["todella_surullinen","surullinen","neutraali", "iloinen", "todella_iloinen"]
+=======
+  const ids = ["hymy","midi","suru"]
+>>>>>>> f36dee5880fa25e2258a27498bfc56e1dbe0a125
   const [popup, setPopup] = useState(false)
   const [painettu, setPainettu] = useState(true)
   const [tapahtuma, setTapahtuma] = useState("")
@@ -107,11 +111,17 @@ function App() {
           </div>
           <h2>Fiilis:</h2>
           <div className = "Hymynaamat" id="Hymynaamat">
+<<<<<<< HEAD
             <img src={very_sad} onClick={kuvahändler} alt="Todella surullinen" id='todella_surullinen'></img>
             <img src={sad} onClick={kuvahändler} alt="Surullinen" id="surullinen"></img>
             <img src={neutral} onClick={kuvahändler} alt="Neutraali" id="neutraali"></img>
             <img src={happy} onClick={kuvahändler} alt="Iloinen" id="iloinen"></img>
             <img src={very_happy} onClick={kuvahändler} alt="Todela iloinen" id="todella_iloinen"></img>
+=======
+            <img src={hymy} onClick={kuvahändler} alt="hymy" id='hymy'></img>
+            <img src={midi} onClick={kuvahändler} alt="midi" id="midi"></img>
+            <img src={suru} onClick={kuvahändler} alt="suru" id="suru"></img>
+>>>>>>> f36dee5880fa25e2258a27498bfc56e1dbe0a125
           </div>
           <div className = "Tekstiboksi" id = "Tekstiboksi">
             <h2>Muistiinpanot</h2>
