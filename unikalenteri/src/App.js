@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import './App.css';
-import hymy from "./kuvat/Hymy.jpg"
-import midi from "./kuvat/Midi.jpg"
-import suru from "./kuvat/Suru.jpg"
+import very_happy from "./kuvat/very-happy.png";
+import happy from "./kuvat/happy.png";
+import neutral from "./kuvat/neutral.png";
+import sad from "./kuvat/sad.png";
+import very_sad from "./kuvat/very-sad.png";
 
 
 
@@ -74,10 +76,15 @@ function App() {
             <input  onChange = {kellohändlerloppu} type="time" min="00:00" max="24:00" required></input>
           <h2>Fiilis:</h2>
           <div className = "Hymynaamat">
-            <img src={hymy} alt="hymy"></img>
-            <img src={midi} alt="midi"></img>
-            <img src={suru} alt="suru"></img>
+            <img src={very_sad} alt="Todella surullinen"></img>
+            <img src={sad} alt="Surullinen"></img>
+            <img src={neutral} alt="Neutraali"></img>
+            <img src={happy} alt="Iloinen"></img>
+            <img src={very_happy} alt="Todella iloinen"></img>
           </div>
+          <button >
+            Lähetä
+          </button>
           </div>
         </div>
         <div className = "Kalenteri"><h1>Kalenteri</h1></div>

@@ -79,7 +79,7 @@
   border-color: black;
   border-width: 15px;
   background-color: white;
-  height: 75vmin;
+  height: 80vmin;
   width: 50vmin;
 }
 
@@ -90,13 +90,14 @@
 }
 
 .Hymynaamat {
-  display: table-row;
+  display: flex;
+  justify-content: center;
 }
 
 .Hymynaamat img{
-  margin-left: 5vmin;
-  height:10vmin;
-  width: 10vmin;
+  margin: 1vmin;
+  height: 6vmin;
+  width: 10min;
 }
 .Lisää{
   font-size: x-large;
