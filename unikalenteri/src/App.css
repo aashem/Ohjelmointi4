@@ -21,22 +21,33 @@
   border: 12px;
   border-style: solid;
   border-color: black;
-  display: inline-block;
+  display: inline-flex;
+  flex-direction: column;
   height: 60vmin;
   width: 90vmin;
   background-color: beige;
 }
 
 .Infopaneeli {
-  margin-top: 5vmin;
+  position: relative;
+  text-align: left;
   z-index: 0;
   border: 12px;
   border-style: solid;
   border-color: black;
-  display: inline-block;
+  display: inline-flex;
+  flex-direction: column;
   height: 60vmin;
   width: 60vmin;
   background-color:yellow;
+}
+
+.Infopaneeli h1 {
+  text-align: center;
+}
+
+.Infopaneeli h2 {
+  margin-left: 2vmin;
 }
 
 .Kalenteri + .Infopaneeli {
@@ -94,10 +105,17 @@
 }
 
 .Hymynaamat img{
+  border-style:dotted;
   margin-left: 5vmin;
   height:10vmin;
   width: 10vmin;
 }
+
+.Hymynaamat img:hover {
+  background-color:red;
+  border-color: red;
+}
+
 .Lisää{
   font-size: x-large;
   margin-top: 2vmin;
@@ -106,4 +124,10 @@
   width: 12vmin;
 }
 
+.boksi{
+  text-justify: top;
+  text-align: left;
+  height: 12vmin;
+  width: 30vmin;
+}
 
