@@ -75,7 +75,7 @@ function App() {
     setNykyinenMuistiinpanot(muistiinpanot)
         popup ? setPopup(false) : setPopup(true)
   }
-  function Viikonpäiväf(props){
+  function Viikonpäivät(props){
     let päivä = props.päivä
     return <div className ="viikonpäivä" onClick={valitsepäivä} id={päivä}>{päivä}</div>
   }
@@ -159,13 +159,13 @@ function App() {
           <button className = "Lisäysnäppäin" onClick = {lisäämerkintäkalenteriin}>Tallenna </button>
         </div>
         <div className = "Kalenteri">
-        <Viikonpäiväf  päivä="ma"></Viikonpäiväf>
-        <Viikonpäiväf  päivä="ti"></Viikonpäiväf>
-        <Viikonpäiväf  päivä="ke"></Viikonpäiväf>
-        <Viikonpäiväf  päivä="to"></Viikonpäiväf>
-        <Viikonpäiväf  päivä="pe"></Viikonpäiväf>
-        <Viikonpäiväf  päivä="la"></Viikonpäiväf>
-        <Viikonpäiväf  päivä="su"></Viikonpäiväf>
+        <Viikonpäivät  päivä="ma"></Viikonpäivät>
+        <Viikonpäivät  päivä="ti"></Viikonpäivät>
+        <Viikonpäivät  päivä="ke"></Viikonpäivät>
+        <Viikonpäivät  päivä="to"></Viikonpäivät>
+        <Viikonpäivät  päivä="pe"></Viikonpäivät>
+        <Viikonpäivät  päivä="la"></Viikonpäivät>
+        <Viikonpäivät  päivä="su"></Viikonpäivät>
 
         </div>
         <Infopaneeli></Infopaneeli>
