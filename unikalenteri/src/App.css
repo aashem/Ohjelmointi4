@@ -18,28 +18,35 @@
 
 .Kalenteri {
   z-index: 0;
-  border: 12px;
+  border: 4px;
   border-style: solid;
   border-color: black;
   display: inline-flex;
-  flex-direction: column;
+  flex-direction: row;
   height: 60vmin;
   width: 90vmin;
   background-color: beige;
 }
 
+.viikonpäivä{
+  background-color: white;
+  margin: 0.5;
+  width: 15vmin;
+  border-style: solid;
+  font-size: x-large;
+}
 .Infopaneeli {
   position: relative;
   text-align: left;
   z-index: 0;
-  border: 12px;
+  border: 4px;
   border-style: solid;
   border-color: black;
   display: inline-flex;
   flex-direction: column;
   height: 60vmin;
   width: 60vmin;
-  background-color:yellow;
+  background-color:beige;
 }
 
 .Infopaneeli h1 {
@@ -59,7 +66,7 @@
   font-size: 3vmin;
   float:right;
   background-color: white;
-  margin-left: 10vmin;
+  margin-left: 17vmin;
   position: absolute;
   height: 5vmin;
   width: 5vmin;
@@ -88,10 +95,20 @@
   z-index: 1;
   border-style: solid;
   border-color: black;
-  border-width: 15px;
-  background-color: white;
-  height: 100vmin;
+  border-width: 4px;
+  background-color: lightgray;
+  height: 75vmin;
   width: 50vmin;
+}
+.Lisäysnäppäin {
+  font-size: x-large;
+  height: 5vmin;
+  width: 10vmin;
+  background-color: white;
+}
+
+.Lisäysnäppäin:hover{
+  background-color: red;
 }
 
 .Kello input{
