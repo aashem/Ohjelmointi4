@@ -73,6 +73,7 @@ function App() {
     setNykyinenKelloLoppu(kelloLoppu)
     setNykyinenNaama(naama)
     setNykyinenMuistiinpanot(muistiinpanot)
+        popup ? setPopup(false) : setPopup(true)
   }
   function Viikonpäiväf(props){
     let päivä = props.päivä
@@ -116,8 +117,7 @@ function App() {
 
   return (
     <div>
-        <header className="Otsikko">UNIKALENTERI</header>
-      <div className = "Pääruutu"><h1>Pääruutu</h1>
+      <div className = "Pääruutu"><h1>UNIKALENTERI</h1>
         <div className = "Lisäysikkuna" style = {{visibility: popup ? "visible" : "hidden"}}>
           <h1>
             <button className="Ikkunanraksi" onClick={lisäyshandler}>X</button>
@@ -156,7 +156,7 @@ function App() {
             <h2>Muistiinpanot</h2>
             <textarea onMouseLeave={muistiinpanohändler} className= "boksi"></textarea>
           </div>
-          <button className = "Lisäysnäppäin" onClick = {lisäämerkintäkalenteriin}>Lisää</button>
+          <button className = "Lisäysnäppäin" onClick = {lisäämerkintäkalenteriin}>Tallenna </button>
         </div>
         <div className = "Kalenteri">
         <Viikonpäiväf  päivä="ma"></Viikonpäiväf>

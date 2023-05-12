@@ -36,7 +36,7 @@
   font-size: x-large;
 }
 .Infopaneeli {
-  position: relative;
+  position: inherit;
   text-align: left;
   z-index: 0;
   border: 4px;
@@ -44,8 +44,8 @@
   border-color: black;
   display: inline-flex;
   flex-direction: column;
-  height: 60vmin;
-  width: 60vmin;
+  height: 65vmin;
+  width: 40vmin;
   background-color:beige;
 }
 
