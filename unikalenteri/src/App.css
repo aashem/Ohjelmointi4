@@ -107,15 +107,9 @@
 
 .Hymynaamat img{
   border-style:dotted;
-<<<<<<< HEAD
   margin: 1vmin;
   height: 6vmin;
   width: 10min;
-=======
-  margin-left: 5vmin;
-  height:10vmin;
-  width: 10vmin;
->>>>>>> f36dee5880fa25e2258a27498bfc56e1dbe0a125
 }
 
 .Hymynaamat img:hover {
