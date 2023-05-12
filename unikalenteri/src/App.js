@@ -29,7 +29,6 @@ function App() {
   const [nykyinenMuistiinpanot, setNykyinenMuistiinpanot] = useState("")
   const [valittuPäivä, setvalittuPäivä] = useState("")
   const Viikonpäivä = (tapahtuma,laji, alku, loppu, naama, muistiinpanot) => {return {tapahtuma: tapahtuma, laji: laji, alku:alku, loppu:loppu, naama:naama, muistiinpanot:muistiinpanot}}
-  const ma = Viikonpäivä("","","","","","")
   
   const lisäyshandler = (e) => {
     popup ? setPopup(false) : setPopup(true)
@@ -74,23 +73,9 @@ function App() {
     setNykyinenKelloLoppu(kelloLoppu)
     setNykyinenNaama(naama)
     setNykyinenMuistiinpanot(muistiinpanot)
-    console.log(tapahtuma)
-    if (valittuPäivä === "ma") {
-      ma.tapahtuma = tapahtuma
-      ma.laji = laji
-      ma.alku = kelloAlku
-      ma.loppu = kelloLoppu
-      ma.naama= naama
-      ma.muistiinpanot = muistiinpanot
-      console.log(ma)
-      return 
-    }
   }
   function Viikonpäiväf(props){
     let päivä = props.päivä
-    if (päivä === "ma"){
-      <div className ="viikonpäivä" onClick={valitsepäivä} id={päivä}><h1>SOPFKSPDFKPSODFK</h1></div>
-    }
     return <div className ="viikonpäivä" onClick={valitsepäivä} id={päivä}>{päivä}</div>
   }
 
@@ -101,6 +86,32 @@ function App() {
       document.getElementById(lista[i]).setAttribute('style', 'border-style: solid')    
     }
     document.getElementById(e.target.id).setAttribute('style', 'border-style: solid; border-color: yellow')    
+  }
+
+  function Infopaneeli(props){
+    return  <div className = "Infopaneeli">
+    <h1>
+    Info
+    </h1>
+    <h2>
+      Tapahtuma: {nykyinenTapahtuma}
+    </h2>
+     <h2 style={{visibility: lajiNäkyvyys ? "visible" : "hidden"}}>
+      Laji: {nykyinenLaji}
+     </h2>
+     <h2>
+      Alku: {nykyinenKelloAlku}
+     </h2>
+     <h2>
+      Loppu: {nykyinenKelloLoppu}
+     </h2>
+     <h2>
+      Tunne: {nykyinenNaama}
+     </h2>
+     <h2>
+      Muistiinpanot: {nykyinenMuistiinpanot}
+     </h2>
+  </div>
   }
 
   return (
@@ -121,7 +132,7 @@ function App() {
           </select>  
           <div className= "Lajikenttä" id ="laji" style ={{visibility: lajiNäkyvyys && popup ? "visible" : "hidden"}}>
             <h2>
-              Tyyppi:
+              Laji:
             </h2>
             <form>
               <input className = "Lajikenttä" onChange = {lajihändler}></input>
@@ -149,37 +160,15 @@ function App() {
         </div>
         <div className = "Kalenteri">
         <Viikonpäiväf  päivä="ma"></Viikonpäiväf>
-        <Viikonpäiväf päivä="ti"></Viikonpäiväf>
-        <Viikonpäiväf päivä="ke"></Viikonpäiväf>
+        <Viikonpäiväf  päivä="ti"></Viikonpäiväf>
+        <Viikonpäiväf  päivä="ke"></Viikonpäiväf>
         <Viikonpäiväf  päivä="to"></Viikonpäiväf>
-        <Viikonpäiväf päivä="pe"></Viikonpäiväf>
+        <Viikonpäiväf  päivä="pe"></Viikonpäiväf>
         <Viikonpäiväf  päivä="la"></Viikonpäiväf>
         <Viikonpäiväf  päivä="su"></Viikonpäiväf>
 
         </div>
-        <div className = "Infopaneeli">
-          <h1>
-          Info
-          </h1>
-          <h2>
-            Tapahtuma: {nykyinenTapahtuma}
-          </h2>
-           <h2 style={{visibility: lajiNäkyvyys ? "visible" : "hidden"}}>
-            Laji: {nykyinenLaji}
-           </h2>
-           <h2>
-            Alku: {nykyinenKelloAlku}
-           </h2>
-           <h2>
-            Loppu: {nykyinenKelloLoppu}
-           </h2>
-           <h2>
-            Tunne: {naama}
-           </h2>
-           <h2>
-            Muistiinpanot: {muistiinpanot}
-           </h2>
-        </div>
+        <Infopaneeli></Infopaneeli>
         <div>
           <button className = "Lisää" onClick={lisäyshandler} style ={{visibility: painettu ? "visible" : "hidden"}}>
             Lisää
